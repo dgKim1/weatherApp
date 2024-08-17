@@ -1,38 +1,69 @@
-.App {
+html{
+  height:100vh;
+  width: 100vw;
+}
+
+body {
   text-align: center;
+  background: url("https://image.slidesdocs.com/responsive-images/background/festival-sun-international-weather-powerpoint-background_254b8d7ae1__960_540.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+
 }
 
-.App-link {
-  color: #61dafb;
+.button-container{
+  display: flex;
+  background-color: #f0f5f1;
+  padding: 10px;
+  border-radius: 10px;
+  bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-box{
+  border-radius: 10px;
+  background-color: white;
+  border: 5px solid white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
 }
+
+.weather-button{
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.weather-button :last-child{
+  margin-right: 0;
+}
+
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
